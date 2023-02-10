@@ -2,6 +2,7 @@ package com.example.zadanieseekbar
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.SeekBar
 
@@ -74,5 +75,14 @@ class MainActivity : AppCompatActivity() {
             override fun onStartTrackingTouch(seekBar: SeekBar?) {}
             override fun onStopTrackingTouch(seekBar: SeekBar?) {}
         })
+
+        findViewById<Button>(R.id.resetbtn).setOnClickListener {
+            seekBarWidth.progress = 100
+            seekBarHeight.progress = 100
+            seekBarWidth2.progress = 100
+            seekBarHeight2.progress = 100
+            seekBarWidth3.progress = 100
+            seekBarHeight3.progress = 100
+        }
     }
 }
